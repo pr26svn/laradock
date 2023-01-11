@@ -31,6 +31,22 @@ $array = array_map($fnArray, $array);
 echo "<pre>";
 var_dump($resArray);
 echo "</pre>";
+//задача 2
+$fnSort=function ($a, $b)
+{
+    if ($a["name"] == $b["name"]) {
+        return 0;
+    }
+    return ($a["name"] < $b["name"]) ? -1 : 1;
+};
+
+
+
+usort($array, $fnSort);
+echo "<pre>";
+var_dump($array);
+echo "</pre>";
+
 ?>
 </body>
 </html>
