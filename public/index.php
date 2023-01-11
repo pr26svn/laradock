@@ -53,6 +53,21 @@ $result = array_filter($array, function ($element) {
 echo "<pre>";
 var_dump($result);
 echo "</pre>";
+
+//4 задача
+
+$resArray4 = [];
+
+$fnArray4 = function (array $element) use (&$resArray4): array {
+
+        $resArray4[$element["name"]] = $element["id"];
+
+    return $element;
+};
+$array = array_map($fnArray4, $array);
+echo "<pre>";
+var_dump($resArray4);
+echo "</pre>";
 ?>
 </body>
 </html>
