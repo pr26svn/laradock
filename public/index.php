@@ -32,8 +32,7 @@ echo "<pre>";
 var_dump($resArray);
 echo "</pre>";
 //задача 2
-$fnSort=function ($a, $b)
-{
+$fnSort = function ($a, $b) {
     if ($a["name"] == $b["name"]) {
         return 0;
     }
@@ -41,12 +40,19 @@ $fnSort=function ($a, $b)
 };
 
 
-
 usort($array, $fnSort);
 echo "<pre>";
 var_dump($array);
 echo "</pre>";
 
+//3 задача
+$result = array_filter($array, function ($element) {
+
+    return $element["name"] == "test4";
+});
+echo "<pre>";
+var_dump($result);
+echo "</pre>";
 ?>
 </body>
 </html>
